@@ -11,14 +11,19 @@ function verify() {
 
   if (isNaN(num)) return Swal.fire("Digite apenas valores numéricos!!!");
 
-  if (num === randomNumber) return reStart();
+  if (num === randomNumber) return resetByHit();
   else if (num > randomNumber)
     Swal.fire(`O número digitado é maior que o número gerado`);
   else if (num < randomNumber)
     Swal.fire(`O número digitado é menor que o número gerado`);
 }
 
-function reStart() {
+function resetByHit() {
   Swal.fire("Você acertou!!");
+  start();
+}
+
+function resetByQuit(){
+  Swal.fire(`O número gerado foi: ${randomNumber}`);
   start();
 }
