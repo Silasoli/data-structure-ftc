@@ -1,21 +1,29 @@
-function checkPalindrome() {
-  const array1 = new Pilha();
-  const array2 = new Pilha();
-  const word = document
-    .getElementById("num")
-    .value.toLowerCase().normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-
-  for (const letter of word) {
-    array1.pushStack(letter);
+class Pilha {
+  constructor() {
+    this.items = [];
   }
 
-  for (let index = array1.sizeStack() - 1; index >= 0; index--) {
-    array2.pushStack(array1.items[index]);
+  push(element) {
+    this.items.push(element);
   }
 
-  const result = String(array1.items) == String(array2.items);
-  const resultString = result ? "É" : "Não é";
+  pop() {
+    return this.items.pop();
+  }
 
-  return Swal.fire(`${resultString} um palíndromo`);
+  peek() {
+    return this.items[this.items.length - 1];
+  }
+
+  isEmpty() {
+    return this.items.length === 0;
+  }
+
+  size() {
+    return this.items.length;
+  }
+
+  clear() {
+    this.items = [];
+  }
 }
