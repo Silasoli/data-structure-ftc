@@ -1,21 +1,14 @@
 function decimalTobase() {
   const number = Number(document.getElementById("num").value);
+  const base = Number(document.getElementById("base").value);
 
   if (isNaN(number) || number === 0)
     return alertResult("error", "<p>Digite apenas números inteiros maiores que zero!</p>");
 
-  const bin = converter(2, number);
-  const oct = converter(8, number);
-  const hex = converter(16, number);
-
   return alertResult(
     "success",
-    `
-  <p>Conversão realizada com sucesso:</p>
-  <p>Binário:	${bin}</p>
-  <p>Octal:	${oct}</p>
-  <p>Hexadecimal:	${hex}</p>
-  `
+    `<p>Conversão realizada com sucesso:</p>
+  <p>Resultado:	${converter(base, number)}</p>`
   );
 }
 
