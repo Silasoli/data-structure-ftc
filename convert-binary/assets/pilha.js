@@ -12,10 +12,7 @@ function decimalTobin(decimal) {
     numerBinaryInString += array.popStack();
   }
 
-  console.log(`${numerBinaryInString}`);
   return Swal.fire(`${numerBinaryInString}`);
-
-  
 }
 
 
