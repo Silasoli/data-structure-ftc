@@ -6,14 +6,15 @@ class Queue {
   }
   verifyExistence(element) {
     const userInput = element.trim().toLowerCase();
-    if(this.isEmpty()) return;
+    if (this.isEmpty()) return;
     for (let i = this.lowestCount; i < this.count; i++) {
-        return this.items[i].trim().toLowerCase() === userInput;
-      }
+      const compare = this.items[i].trim().toLowerCase() === userInput;
+      if (compare) return compare;
     }
+  }
   enqueue(element) {
     const verify = this.verifyExistence(element);
-    if(verify) return 'Item já cadastrado';
+    if (verify) return "Item já cadastrado";
     this.items[this.count] = element;
     this.count++;
   }
