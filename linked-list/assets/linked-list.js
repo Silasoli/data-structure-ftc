@@ -13,6 +13,7 @@ class LinkedList {
     this.count = 0;
     this.head = undefined;
   }
+
   push(element) {
     const node = new Node(element);
     let current;
