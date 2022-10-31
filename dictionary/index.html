@@ -9,17 +9,55 @@
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/style.css">
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
-    <title>Fila</title>
+    <title>Lista telefônica</title>
 </head>
 
 <body>
-
-    <footer class="text-center text-white fixed-bottom" style="background-color: #212529;">
-        <div class="text-center p-3" style="background-color: #212529;">
-            © 2022 Copyright:
-            <a class="text-white" href="https://silasoli.github.io/">silasoli</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+            </ul>
         </div>
-    </footer>
+    </div>
+</nav>
+<div class="container">
+    <button id="send-btn" class="btn btn-primary btn-sm btn-block" disabled>Lista telefônica</button>
+    <button id="qtdPersons" class="btn btn-success btn-sm btn-block" disabled>Quantidade de itens:</button>
+    <label class="form-label"></label>
+    <div class="box-form">
+        <select id="select" class="form-select" aria-label="Default select example">
+            <option>Abra para ver itens da lista telefônica</option>
+        </select>
+        <div class="mb-3">
+            <label class="form-label">Digite o nome da pessoa:</label>
+            <input id="person" class="form-control" type="text" required>
+        </div>
+        <div class="mb-3">
+              <label class="form-label">Digite número do telefone:</label>
+              <input id="phone" class="form-control" type="text" required>
+        </div>
+        <button id="send-btn" class="btn btn-outline-primary btn-sm btn-block" type="submit"
+            onclick="addItem()">Adicionar
+        </button>
+        <button id="send-btn" class="btn btn-outline-primary btn-sm btn-block" type="submit"
+            onclick="removeItem()">Remover Item
+        </button>
+    </div>
+    <div id="putOnScreen">
+
+    </div>
+</div>
+
+<footer class="text-center text-white fixed-bottom" style="background-color: #212529;">
+    <div class="text-center p-3" style="background-color: #212529;">
+        © 2022 Copyright:
+        <a class="text-white" href="https://silasoli.github.io/">silasoli</a>
+    </div>
+</footer>
 
     <script src="./assets/valuePair.js"></script>
     <script src="./assets/dictionary.js"></script>

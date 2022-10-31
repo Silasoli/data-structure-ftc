@@ -24,20 +24,20 @@ ul {
 
 .box {
     margin: 10px;
-    width: 300px;
+    width: 500px;
     height: 300px;
     overflow: auto;
     background: #fff;
 }
 
 .box-form {
-    width: 300px;
+    width: 500px;
 }
 
 #send-btn, #qtdPersons, #lastRemoved {
     margin-top: 5px;
     margin-bottom: 5px;
-    width: 300px;
+    width: 500px;
     box-shadow: none;
 }
 
